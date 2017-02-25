@@ -117,7 +117,17 @@ public class Foto {
         }
         final Foto other = (Foto) obj;
         return true;
-    }
+    } 
+    
+     public void adicionar_etiqueta(Etiqueta nueva_etiqueta){ 
+       etiquetas.add(nueva_etiqueta);                       
+    } 
+    public boolean buscar_etiqueta(Etiqueta nueva_etiqueta){ 
+      return etiquetas.contains(nueva_etiqueta);                          
+    } 
+    public boolean eliminar_etiqueta(Etiqueta nueva_etiqueta){ 
+      return etiquetas.remove(nueva_etiqueta);      
+    }           
 
  
     }
