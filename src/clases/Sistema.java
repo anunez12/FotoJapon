@@ -6,15 +6,16 @@
 
 package clases;
 
+import java.util.ArrayList ;
 /**
  *
  * @author anunez12
  */
 public class Sistema { 
     
-    private Foto[] fotos; 
-    private Etiqueta[] etiquetas; 
-    private Usuario[] usuarios;
+    private ArrayList<Foto> fotos = new ArrayList<>(); 
+    private ArrayList<Etiqueta> etiquetas = new ArrayList<>(); 
+    private ArrayList<Usuario> usuarios = new ArrayList<>();     
  
     public Sistema(){ 
      

@@ -17,7 +17,7 @@ public class Etiqueta {
     private String nombre;
     private Usuario usuario;
 
-    public Etiqueta(String nombre, Usuario usuario) {
+    public Etiqueta(String nombre, Usuario usuario) {   
 
         this.nombre = nombre;
         this.usuario = usuario;

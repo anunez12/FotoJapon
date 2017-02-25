@@ -5,8 +5,9 @@
  */
 package clases;
 
+import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Objects;
+import java.util.Objects;       
 
 /**
  *
@@ -20,7 +21,7 @@ public class Foto {
     private long size; //tamaño 
     private long resolucion;
     private String permiso;
-    private Etiqueta[] etiquetas;
+    private ArrayList<Etiqueta> etiquetas = new ArrayList<>();
 
     public Foto(String url, String nombre_archivo, String tipo_de_dato, long size, long resolucion, String permiso) {
 
@@ -80,11 +81,11 @@ public class Foto {
         this.permiso = permiso;
     }
 
-    public Etiqueta[] getEtiquetas() {
+    public ArrayList getEtiquetas() {
         return etiquetas;
     }
 
-    public void setEtiquetas(Etiqueta[] etiquetas) {
+    public void setEtiquetas(ArrayList etiquetas) {
         this.etiquetas = etiquetas;
     }
 
@@ -95,14 +96,14 @@ public class Foto {
 
     @Override
     public int hashCode() {
-        int hash = 7;
-        hash = 73 * hash + Objects.hashCode(this.url);
-        hash = 73 * hash + Objects.hashCode(this.nombre_archivo);
-        hash = 73 * hash + Objects.hashCode(this.tipo_de_dato);
-        hash = 73 * hash + Objects.hashCode(this.size);
-        hash = 73 * hash + (int) (this.resolucion ^ (this.resolucion >>> 32));
-        hash = 73 * hash + Objects.hashCode(this.permiso);
-        hash = 73 * hash + Arrays.deepHashCode(this.etiquetas);
+        int hash = 3;
+        hash = 47 * hash + Objects.hashCode(this.url);
+        hash = 47 * hash + Objects.hashCode(this.nombre_archivo);
+        hash = 47 * hash + Objects.hashCode(this.tipo_de_dato);
+        hash = 47 * hash + (int) (this.size ^ (this.size >>> 32));
+        hash = 47 * hash + (int) (this.resolucion ^ (this.resolucion >>> 32));
+        hash = 47 * hash + Objects.hashCode(this.permiso);
+        hash = 47 * hash + Objects.hashCode(this.etiquetas);
         return hash;
     }
 
@@ -115,10 +116,10 @@ public class Foto {
             return false;
         }
         final Foto other = (Foto) obj;
-        if (!Objects.equals(this.url, other.url)) {
-            return false;
-        }
         return true;
     }
+
+ 
+    }
      
-}
+
